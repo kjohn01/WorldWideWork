@@ -1,4 +1,6 @@
 /* YOUR CUSTOM STYLES */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 html,
 body,
 header,
@@ -8,14 +10,28 @@ header,
 .active,
 .carousel-inner {
     height: 100%;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .view {
-    background: url("http://mdbootstrap.com/img/Photos/Horizontal/Work/full page/img%20(2).jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.scrolling-navbar {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.top-nav-collapse {
+    background-color: #00bfa5;
 }
 
 .flex-center {
@@ -23,21 +39,35 @@ header,
 }
 
 .carousel-item:nth-child(1) {
-    background-image: url("http://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20(1).jpg");
+    background-image: url("../img/cover/avi-richards-183715-1300x815.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .carousel-item:nth-child(2) {
-    background-image: url("http://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20(2).jpg");
+    background-image: url("../img/cover/adventure-friendship-group.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .carousel-item:nth-child(3) {
-    background-image: url("http://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20(3).jpg");
+    background-image: url("../img/cover/beach-office-haadgruad.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.myTitle {
+  margin-top: 3em;
+}
+
+/*footer.page-footer {
+    margin-top: 0;
+}*/
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #00bfa5;
+    }
 }
 
 @media (min-width: 776px) {
