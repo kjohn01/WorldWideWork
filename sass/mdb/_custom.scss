@@ -1,1 +1,213 @@
 // Your custom style
+$myPrime: #2BBBAD;
+$mySecondary: #202A34;
+$myShadow: #5F5E65;
+$myBackground: #FAFAFA;
+$cardFont-size: 0.9rem;
+$cardLine-height: 1.4;
+$cardLines-to-show: 3;
+/* YOUR CUSTOM STYLES */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html,
+body,
+header,
+.view,
+.carousel,
+.carousel-item,
+.active,
+.carousel-inner {
+    height: 100%;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+main {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.view {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: $myPrime;
+  transition: background-color 200ms linear;
+}
+
+.navbar-brand {
+  align-self: center;
+}
+
+.collapse {
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+.content {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  .btn-learnMore {
+    background-color: $mySecondary;
+  }
+}
+
+.btn-rounded {
+    border-radius: 1000rem;
+    font-size: larger;
+}
+
+.scrolling-navbar {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.top-nav-collapse {
+    background-color: $myPrime;
+}
+
+.flex-center {
+    color: $myBackground;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url("../img/cover/adventure-friendship-group.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url("../img/cover/Resources-for-Digital-Nomads-smaller-size.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url("../img/cover/mans-personality-jeans.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.h1-responsive {
+  margin-right: 3.5rem;
+  margin-left: 3.5rem;
+  margin-bottom: 1em;
+}
+
+.h4-responsive {
+  margin-right: 3.5rem;
+  margin-left: 3.5rem;
+}
+
+.my-6 {
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+}
+
+.quoteMark {
+  text-shadow: 2px 2px 4px $myShadow;
+  color: $myPrime;
+  font-size: 3rem;
+}
+
+.iconColor {
+  color: $myPrime;
+  font-size: 5rem;
+  text-shadow: 2px 2px 4px $myShadow;
+}
+
+.parallax {
+    background-attachment: fixed;
+}
+
+.card {
+    // margin-bottom: 15rem;
+    border-width: 0;
+}
+
+.card-text {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: $cardFont-size*$cardLine-height*$cardLines-to-show; /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: $cardFont-size;
+  line-height: $cardLine-height;
+  -webkit-line-clamp: $cardLines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#about {
+    background-color: $myBackground;
+}
+
+#cities {
+    background-image: url("../img/cover/film-sleeping-bag-camera.jpg");
+    // background-color: $myBackground;
+}
+
+#quote {
+    /*background-image: url("../img/cover/.jpg");*/
+    background-color: $myBackground;
+    /*display: none;*/
+}
+
+#imagine {
+    background-image: url("../img/cover/4.jpg");
+}
+
+#whoShouldCome {
+    background-image: url("../img/cover/1.jpg");
+}
+
+#subscribe {
+    /*background-image: url("../img/cover/.jpg");*/
+    background-color: $myPrime;
+    /*display: none;*/
+}
+
+/*footer.page-footer {
+    margin-top: 0;
+}*/
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: $myPrime;
+    }
+    .h5-responsive {
+        font-size: 100%;
+    }
+    .card {
+        margin-bottom: 2rem;
+    }
+    .my-6 {
+        margin-top: 5rem;
+    }
+    // #about {
+    //   background-image: "";
+    //   background-color: $myBackground;
+    // }
+}
+
+@media (min-width: 776px) {
+    .carousel .view ul li {
+        display: inline;
+    }
+    .carousel .view .full-bg-img ul li .flex-item {
+        margin-bottom: 1.5rem;
+    }
+}

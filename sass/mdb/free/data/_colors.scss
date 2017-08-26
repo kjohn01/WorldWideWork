@@ -7,7 +7,7 @@ $mdb-color: (
   "lighten-2":  #7283A7,
   "lighten-1":  #59698D,
   "base":       #45526E,
-  "darken-1":   #3B465E, 
+  "darken-1":   #3B465E,
   "darken-2":   #2E3951,
   "darken-3":   #1C2A48,
   "darken-4":   #1C2331,
@@ -987,4 +987,4 @@ $color-palette: map-merge($mdb-colors, $material-colors);
   background: -moz-linear-gradient(top, #00ff90 0%, #59ffdd 47%, #ffff00 100%);
   background: -webkit-linear-gradient(top, #00ff90 0%,#59ffdd 47%,#ffff00 100%);
   background: linear-gradient(to bottom, #00ff90 0%,#59ffdd 47%,#ffff00 100%);
-} 
+}
