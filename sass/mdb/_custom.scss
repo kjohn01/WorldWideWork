@@ -19,6 +19,7 @@ header,
 .carousel-inner {
     height: 100%;
     font-family: 'Noto Sans TC', sans-serif;
+    color: $mySecondary;
 }
 
 main {
@@ -32,6 +33,16 @@ main {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+hr {
+  border-color: $myPrime;
+  border-width: 3px;
+  max-width: 50px;
+}
+
+.white {
+  border-color: $myBackground;
 }
 
 .navbar {
@@ -54,7 +65,6 @@ main {
 }
 
 .content {
-  margin-top: 5rem;
   margin-bottom: 10rem;
   .btn-learnMore {
     background-color: $mySecondary;
@@ -64,6 +74,10 @@ main {
 .btn-rounded {
     border-radius: 1000rem;
     font-size: larger;
+}
+
+.btn-learnMore {
+  background-color: $myBackground;
 }
 
 .scrolling-navbar {
@@ -151,8 +165,39 @@ main {
   text-overflow: ellipsis;
 }
 
+.contentPosition1 {
+  width: 45%;
+  position: absolute;
+  z-index: 1;
+  margin-top: 5rem;
+  margin-left: 3rem;
+}
+
+.contentPosition2 {
+  width: 45%;
+  position: absolute;
+  right: 5rem;
+  z-index: 1;
+  margin-top: 5rem;
+}
+
+.imgPosition {
+  width: 50%;
+  margin-top: 5%;
+}
+
+.btnPosition {
+    width: 100%;
+    margin-bottom: 10rem;
+    padding-top: 5rem;
+}
+
 #about {
     background-color: $myBackground;
+}
+
+#features {
+   background-color: $myShadow;
 }
 
 #cities {
@@ -172,6 +217,7 @@ main {
 
 #whoShouldCome {
     background-image: url("../img/cover/1.jpg");
+    background-position: center;
 }
 
 #subscribe {
@@ -183,6 +229,29 @@ main {
 /*footer.page-footer {
     margin-top: 0;
 }*/
+
+@media only screen and (max-width: 576px) {
+  .p-rwd {
+    max-width: 15rem;
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .imgPosition {
+    width: 100%;
+  }
+  .btnPosition {
+    padding-top: 3rem;
+  }
+  .contentPosition1, .contentPosition2 {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    right: 0;
+  }
+}
 
 @media only screen and (max-width: 768px) {
     .navbar {
@@ -197,10 +266,9 @@ main {
     .my-6 {
         margin-top: 5rem;
     }
-    // #about {
-    //   background-image: "";
-    //   background-color: $myBackground;
-    // }
+    .contentPosition1, .contentPosition2 {
+        margin-top: 0;
+    }
 }
 
 @media (min-width: 776px) {
@@ -210,4 +278,11 @@ main {
     .carousel .view .full-bg-img ul li .flex-item {
         margin-bottom: 1.5rem;
     }
+
+}
+
+@media (min-width: 1025px) {
+  .contentPosition2 {
+     right: 10rem;
+  }
 }

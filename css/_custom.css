@@ -9,7 +9,8 @@ header,
 .active,
 .carousel-inner {
   height: 100%;
-  font-family: 'Noto Sans TC', sans-serif; }
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #202A34; }
 
 main {
   background-repeat: no-repeat;
@@ -21,6 +22,14 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+hr {
+  border-color: #2BBBAD;
+  border-width: 3px;
+  max-width: 50px; }
+
+.white {
+  border-color: #FAFAFA; }
 
 .navbar {
   background-color: transparent; }
@@ -36,7 +45,6 @@ main {
   font-size: 1rem; }
 
 .content {
-  margin-top: 5rem;
   margin-bottom: 10rem; }
   .content .btn-learnMore {
     background-color: #202A34; }
@@ -44,6 +52,9 @@ main {
 .btn-rounded {
   border-radius: 1000rem;
   font-size: larger; }
+
+.btn-learnMore {
+  background-color: #FAFAFA; }
 
 .scrolling-navbar {
   -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
@@ -117,11 +128,34 @@ main {
   overflow: hidden;
   text-overflow: ellipsis; }
 
+.contentPosition1 {
+  width: 45%;
+  position: absolute;
+  z-index: 1;
+  margin-top: 5rem;
+  margin-left: 3rem; }
+
+.contentPosition2 {
+  width: 45%;
+  position: absolute;
+  right: 5rem;
+  z-index: 1;
+  margin-top: 5rem; }
+
+.imgPosition {
+  width: 50%;
+  margin-top: 5%; }
+
+.btnPosition {
+  width: 100%;
+  margin-bottom: 10rem;
+  padding-top: 5rem; }
+
 #about {
   background-color: #FAFAFA; }
 
 #features {
-  background-color: #FAFAFA; }
+  background-color: #5F5E65; }
 
 #cities {
   background-image: url("../img/cover/film-sleeping-bag-camera.jpg"); }
@@ -135,7 +169,8 @@ main {
   background-image: url("../img/cover/4.jpg"); }
 
 #whoShouldCome {
-  background-image: url("../img/cover/1.jpg"); }
+  background-image: url("../img/cover/1.jpg");
+  background-position: center; }
 
 #subscribe {
   /*background-image: url("../img/cover/.jpg");*/
@@ -145,6 +180,23 @@ main {
 /*footer.page-footer {
     margin-top: 0;
 }*/
+@media only screen and (max-width: 576px) {
+  .p-rwd {
+    max-width: 15rem;
+    align-self: center; } }
+@media only screen and (max-width: 767px) {
+  .imgPosition {
+    width: 100%; }
+
+  .btnPosition {
+    padding-top: 3rem; }
+
+  .contentPosition1, .contentPosition2 {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    right: 0; } }
 @media only screen and (max-width: 768px) {
   .navbar {
     background-color: #2BBBAD; }
@@ -156,12 +208,18 @@ main {
     margin-bottom: 2rem; }
 
   .my-6 {
-    margin-top: 5rem; } }
+    margin-top: 5rem; }
+
+  .contentPosition1, .contentPosition2 {
+    margin-top: 0; } }
 @media (min-width: 776px) {
   .carousel .view ul li {
     display: inline; }
 
   .carousel .view .full-bg-img ul li .flex-item {
     margin-bottom: 1.5rem; } }
+@media (min-width: 1025px) {
+  .contentPosition2 {
+    right: 10rem; } }
 
 /*# sourceMappingURL=_custom.css.map */
