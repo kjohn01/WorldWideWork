@@ -76,6 +76,12 @@ hr {
     font-size: larger;
 }
 
+.btn-outline-trans {
+  background-color: transparent;
+  border: 3px solid $myBackground;
+  box-shadow: none;
+}
+
 .btn-learnMore {
   background-color: $myBackground;
 }
@@ -131,10 +137,14 @@ hr {
   margin-bottom: 3rem;
 }
 
-.quoteMark {
-  text-shadow: 2px 2px 4px $myShadow;
+.fa-quote-left {
   color: $myPrime;
-  font-size: 3rem;
+  margin-right: 3rem;
+}
+
+.fa-quote-right {
+  color: $myPrime;
+  margin-left: 3rem;
 }
 
 .iconColor {
@@ -186,10 +196,16 @@ hr {
   margin-top: 5%;
 }
 
-.btnPosition {
+.btnPosition1 {
     width: 100%;
     margin-bottom: 10rem;
     padding-top: 5rem;
+}
+
+.btnPosition2 {
+    width: 100%;
+    margin-bottom: 10rem;
+    padding-top: 15rem;
 }
 
 #about {
@@ -226,9 +242,32 @@ hr {
     /*display: none;*/
 }
 
-/*footer.page-footer {
+#mc_embed_signup {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#mce-EMAIL {
+  background-color: $myBackground;
+  border-radius: 100000px;
+  box-shadow: none;
+  width: 70%;
+  margin-bottom: 1rem;
+  height: 3rem;
+}
+
+#mce-EMAIL::placeholder {
+  color: $myShadow;
+  margin-left: 1rem;
+}
+
+footer.page-footer {
     margin-top: 0;
-}*/
+    background-color: $myShadow;
+    .font-italic {
+      font-size: 0.5rem;
+    }
+}
 
 @media only screen and (max-width: 576px) {
   .p-rwd {
@@ -241,7 +280,7 @@ hr {
   .imgPosition {
     width: 100%;
   }
-  .btnPosition {
+  .btnPosition1, .btnPosition2 {
     padding-top: 3rem;
   }
   .contentPosition1, .contentPosition2 {
@@ -278,11 +317,16 @@ hr {
     .carousel .view .full-bg-img ul li .flex-item {
         margin-bottom: 1.5rem;
     }
-
+    .btnPosition2 {
+      padding-top: 20rem;
+    }
 }
 
 @media (min-width: 1025px) {
   .contentPosition2 {
-     right: 10rem;
+     right: 9rem;
+  }
+  .btnPosition2 {
+    padding-top: 15rem;
   }
 }
