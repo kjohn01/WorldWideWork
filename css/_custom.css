@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 html,
 body,
-header,
+.wide,
 .view,
 .carousel,
 .carousel-item,
@@ -46,8 +46,15 @@ hr {
 
 .content {
   margin-bottom: 10rem; }
-  .content .btn-learnMore {
-    background-color: #202A34; }
+
+.bc-mySecondary {
+  background-color: #202A34; }
+
+.bc-myBackground {
+  background-color: #FAFAFA; }
+
+.bc-myShadow {
+  background-color: #5F5E65; }
 
 .btn-rounded {
   border-radius: 1000rem;
@@ -104,17 +111,16 @@ hr {
   margin-bottom: 3rem; }
 
 .fa-quote-left {
-  color: #2BBBAD;
   margin-right: 3rem; }
 
 .fa-quote-right {
-  color: #2BBBAD;
   margin-left: 3rem; }
 
 .iconColor {
-  color: #2BBBAD;
-  font-size: 5rem;
-  text-shadow: 2px 2px 4px #5F5E65; }
+  font-size: 5rem; }
+
+.myPrime-text {
+  color: #2BBBAD; }
 
 .parallax {
   background-attachment: fixed; }
@@ -211,6 +217,34 @@ footer.page-footer {
   background-color: #5F5E65; }
   footer.page-footer .font-italic {
     font-size: 0.5rem; }
+
+.chiangMaiHeader {
+  background-image: url("../img/Chiang Mai/ChiangMai2.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 10rem;
+  padding-bottom: 5rem; }
+
+.hoChiMinhHeader {
+  background-image: url("../img/HoChiMing City/5.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 10rem;
+  padding-bottom: 5rem; }
+
+.baliHeader {
+  background-image: url("../img/Bali/4.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 10rem;
+  padding-bottom: 5rem; }
+
+.detailsHeader {
+  background-image: url("../img/Bali/4.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 10rem;
+  padding-bottom: 5rem; }
 
 @media only screen and (max-width: 576px) {
   .p-rwd {

@@ -11,7 +11,7 @@ $cardLines-to-show: 3;
 
 html,
 body,
-header,
+.wide,
 .view,
 .carousel,
 .carousel-item,
@@ -66,9 +66,18 @@ hr {
 
 .content {
   margin-bottom: 10rem;
-  .btn-learnMore {
-    background-color: $mySecondary;
-  }
+}
+
+.bc-mySecondary {
+  background-color: $mySecondary;
+}
+
+.bc-myBackground {
+  background-color: $myBackground;
+}
+
+.bc-myShadow {
+  background-color: $myShadow;
 }
 
 .btn-rounded {
@@ -138,19 +147,20 @@ hr {
 }
 
 .fa-quote-left {
-  color: $myPrime;
   margin-right: 3rem;
 }
 
 .fa-quote-right {
-  color: $myPrime;
   margin-left: 3rem;
 }
 
 .iconColor {
-  color: $myPrime;
   font-size: 5rem;
-  text-shadow: 2px 2px 4px $myShadow;
+  // text-shadow: 2px 2px 4px $myShadow;
+}
+
+.myPrime-text {
+  color: $myPrime;
 }
 
 .parallax {
@@ -267,6 +277,38 @@ footer.page-footer {
     .font-italic {
       font-size: 0.5rem;
     }
+}
+
+.chiangMaiHeader {
+  background-image: url("../img/Chiang Mai/ChiangMai2.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.hoChiMinhHeader {
+  background-image: url("../img/HoChiMing City/5.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.baliHeader {
+  background-image: url("../img/Bali/4.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.detailsHeader {
+  background-image: url("../img/Bali/4.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
 }
 
 @media only screen and (max-width: 576px) {
