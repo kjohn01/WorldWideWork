@@ -212,6 +212,9 @@ hr {
   color: #5F5E65;
   margin-left: 1rem; }
 
+#explainFeature li {
+  width: 75%; }
+
 footer.page-footer {
   margin-top: 0;
   background-color: #5F5E65; }
@@ -240,7 +243,7 @@ footer.page-footer {
   padding-bottom: 5rem; }
 
 .detailsHeader {
-  background-image: url("../img/Bali/4.jpg");
+  background-image: url("../img/cover/silhouette-of-man-jumping-on-rocks-at-sunset.jpg");
   background-repeat: no-repeat;
   background-position: right;
   padding-top: 10rem;
@@ -249,7 +252,15 @@ footer.page-footer {
 @media only screen and (max-width: 576px) {
   .p-rwd {
     max-width: 15rem;
-    align-self: center; } }
+    align-self: center; }
+
+  #explainFeature li {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #explainFeature li span {
+      margin-bottom: 3rem;
+      padding: 0; } }
 @media only screen and (max-width: 767px) {
   .imgPosition {
     width: 100%; }
@@ -262,7 +273,10 @@ footer.page-footer {
     position: relative;
     z-index: 1;
     margin: 0;
-    right: 0; } }
+    right: 0; }
+
+  #explainFeature li {
+    width: 100%; } }
 @media only screen and (max-width: 768px) {
   .navbar {
     background-color: #2BBBAD; }
