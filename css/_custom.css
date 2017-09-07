@@ -28,8 +28,37 @@ hr {
   border-width: 3px;
   max-width: 50px; }
 
+.dashLine {
+  border-width: 1px;
+  max-width: 10000000000px;
+  opacity: 0.3;
+  border-style: dashed; }
+
 .white {
   border-color: #FAFAFA; }
+
+#backToTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  background-color: #2BBBAD;
+  /* Set a background color */
+  color: #FAFAFA;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */ }
+
+#backToTop.scrolled {
+  display: block; }
 
 .navbar {
   background-color: transparent; }
@@ -246,6 +275,13 @@ footer.page-footer {
   background-image: url("../img/cover/silhouette-of-man-jumping-on-rocks-at-sunset.jpg");
   background-repeat: no-repeat;
   background-position: right;
+  padding-top: 10rem;
+  padding-bottom: 5rem; }
+
+.faqHeader {
+  background-image: url("../img/cover/o_1ak8nh2n61lkg1jr31f5ljlg3jo7.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   padding-top: 10rem;
   padding-bottom: 5rem; }
 
