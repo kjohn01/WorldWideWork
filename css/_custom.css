@@ -151,6 +151,9 @@ hr {
 .myPrime-text {
   color: #2BBBAD; }
 
+.mySecondary-text {
+  color: #202A34 !important; }
+
 .parallax {
   background-attachment: fixed; }
 
