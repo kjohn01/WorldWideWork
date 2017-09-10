@@ -1,14 +1,10 @@
 var gulp = require('gulp');
-var pug = require('gulp-pug');
-var del = require('del');
 var htmlmin = require('gulp-htmlmin');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
-var runSequence  = require('run-sequence');
-var ghPages = require('gulp-gh-pages');
 
 //minimize html
 gulp.task('html', function() {
@@ -50,36 +46,11 @@ gulp.task('browsersync', function () {
   });
 });
 
-// gh-pages
-gulp.task('deploy', function() {
-  return gulp.src('build/**/*')
-    .pipe(ghPages());
-});
-// pug
-gulp.task('pug', function(){
-  return gulp.src(['app/pug/*.pug'])
-    .pipe(pug({
-      pretty: true
-    }))
-    .pipe(gulp.dest('build/'))
-});
-// Cleaning
-gulp.task('clean', function(){
-  return del(['build/**/*']);
-});
 gulp.task('watch', function(){
   gulp.watch('src/*.html', ['html']) //監看所有 html 檔案，檔案有更動時就執行 task html
   gulp.watch('src/css/*.css', ['style'])  //監看所有 css 檔案，檔案有更動時就執行 task style
   gulp.watch('src/js/*.js', ['script']); //監看所有 js 檔案，檔案有更動時就執行 task script
   gulp.watch('app/pug/**/*.pug', ['pug']);
 });
-// Build Sequence
-// -------------------
-gulp.task('default', ['watch','browsersync','html','style', 'script', 'image'], function(){
-  runSequence('watch', ['pug']);
-});
-// 在執行 build 時，也依序執行 deploy
-// 不過 deploy 要放在最後面
-gulp.task('build', function(){
-  runSequence('clean', ['pug'], 'deploy');
-});
+
+gulp.task('default', ['watch','browsersync','html','style', 'script', 'image']);
