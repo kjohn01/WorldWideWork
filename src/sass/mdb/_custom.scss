@@ -20,6 +20,7 @@ body,
     height: 100%;
     font-family: 'Noto Sans TC', sans-serif;
     color: $mySecondary;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 main {
@@ -79,6 +80,11 @@ hr {
 
 .navbar-brand {
   align-self: center;
+}
+
+.safari {
+  font-weight: 500;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .collapse {

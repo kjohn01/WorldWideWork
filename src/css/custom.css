@@ -10,7 +10,8 @@ body,
 .carousel-inner {
   height: 100%;
   font-family: 'Noto Sans TC', sans-serif;
-  color: #202A34; }
+  color: #202A34;
+  -webkit-font-smoothing: subpixel-antialiased; }
 
 main {
   background-repeat: no-repeat;
@@ -69,6 +70,10 @@ hr {
 
 .navbar-brand {
   align-self: center; }
+
+.safari {
+  font-weight: 500;
+  -webkit-font-smoothing: subpixel-antialiased; }
 
 .collapse .btn {
   font-size: 1rem; }
