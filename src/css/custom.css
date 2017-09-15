@@ -74,6 +74,17 @@ hr {
 .safari {
   font-weight: 500;
   -webkit-font-smoothing: subpixel-antialiased; }
+  .safari div input {
+    border-radius: 1000rem !important;
+    font-size: larger !important;
+    background-color: transparent !important;
+    border: 3px solid #FAFAFA !important;
+    padding: .36rem 2.13rem !important;
+    margin: 6px !important;
+    height: auto !important;
+    transition: .2s ease-out !important;
+    display: inline-block !important;
+    font-weight: 400 !important; }
 
 .collapse .btn {
   font-size: 1rem; }
@@ -236,20 +247,19 @@ hr {
   /*display: none;*/ }
 
 #mc_embed_signup {
-  margin-top: 3rem;
-  margin-bottom: 3rem; }
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important; }
 
 #mce-EMAIL {
-  background-color: #FAFAFA;
-  border-radius: 100000px;
-  box-shadow: none;
-  width: 70%;
-  margin-bottom: 1rem;
-  height: 3rem; }
+  background-color: #FAFAFA !important;
+  border-radius: 100000px !important;
+  box-shadow: none !important;
+  width: 70% !important;
+  height: 3rem !important; }
 
 #mce-EMAIL::placeholder {
-  color: #5F5E65;
-  margin-left: 1rem; }
+  color: #5F5E65 !important;
+  margin-left: 1rem !important; }
 
 #explainFeature li {
   width: 75%; }
