@@ -201,8 +201,10 @@ hr {
 }
 
 .card {
-    // margin-bottom: 15rem;
     border-width: 0;
+    .view {
+      height: auto;
+    }
 }
 
 .card-text {

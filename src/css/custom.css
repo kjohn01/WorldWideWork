@@ -164,6 +164,8 @@ hr {
 
 .card {
   border-width: 0; }
+  .card .view {
+    height: auto; }
 
 .card-text {
   display: block;
