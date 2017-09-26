@@ -376,6 +376,12 @@ footer.page-footer {
   padding-bottom: 5rem;
 }
 
+.md-form {
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .p-rwd {
     max-width: 15rem;
