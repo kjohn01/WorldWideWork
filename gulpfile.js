@@ -1,10 +1,43 @@
 var gulp = require('gulp');
+var gutil = require('gulp-util');
+var critical = require('critical').stream;
 var htmlmin = require('gulp-htmlmin');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
+
+//critical css
+gulp.task('critical', function () {
+  return gulp.src('src/*.html')
+        .pipe(critical({
+          base: 'src/',
+          inline: true,
+          css: 'src/css/custom.css',
+          minify: true,
+          timeout: 120000,
+          dimensions: [{
+            width: 1300,
+            height: 900
+          },
+          {
+            width: 500,
+            height: 900
+          }]
+        }))
+        .on('error', function(err) { gutil.log(gutil.colors.red(err.message));
+        })
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.stream());
+    // critical.generate({
+    //     inline: true,
+    //     base: 'src/',
+    //     src: '*.html',
+    //     dest: 'dist/',
+    //
+    // });
+});
 
 //minimize html
 gulp.task('html', function() {
@@ -47,10 +80,12 @@ gulp.task('browsersync', function () {
 });
 
 gulp.task('watch', function(){
+  gulp.watch('src/css/*.css', ['critical'])
+
   gulp.watch('src/*.html', ['html']) //監看所有 html 檔案，檔案有更動時就執行 task html
   gulp.watch('src/css/*.css', ['style'])  //監看所有 css 檔案，檔案有更動時就執行 task style
   gulp.watch('src/js/*.js', ['script']); //監看所有 js 檔案，檔案有更動時就執行 task script
   gulp.watch('app/pug/**/*.pug', ['pug']);
 });
 
-gulp.task('default', ['watch','browsersync','html','style', 'script', 'image']);
+gulp.task('default', ['watch','browsersync','critical','html','style', 'script', 'image']);

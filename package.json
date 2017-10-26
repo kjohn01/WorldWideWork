@@ -29,5 +29,9 @@
     "gulp-pug": "^3.3.0",
     "gulp-uglify": "^3.0.0",
     "run-sequence": "^2.1.0"
+  },
+  "dependencies": {
+    "critical": "^0.9.1",
+    "gulp-util": "^3.0.8"
   }
 }
